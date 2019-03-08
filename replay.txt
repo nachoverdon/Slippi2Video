@@ -1,1 +1,0 @@
-{"replay": "C:\\Program Files\\Slippi Launcher\\resources\\app.asar.unpacked\\app\\dolphin\\replays\\Game_20190305T073805.slp"}
