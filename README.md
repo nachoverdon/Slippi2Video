@@ -15,9 +15,15 @@ pip install pyslippi
 
 # Notes
 Things to investigate/improve:
+
 Better sync
+
 Trimming video
+
 Dolphin 200% + audio dump, then ffmpeg slowdown
+
 Dolphin codecs
+
 Renaming video with game info (player names, chars, stage...)
+
 Youtube auto upload
