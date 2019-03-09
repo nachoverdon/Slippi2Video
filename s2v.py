@@ -3,7 +3,7 @@ import time
 import math
 import json
 import subprocess
-import pygetwindow as gw
+import pyautogui as pag
 from glob import glob
 from slippi import Game
 from config import CONFIG
