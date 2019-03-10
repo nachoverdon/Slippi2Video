@@ -15,9 +15,7 @@ replays_folder = CONFIG['replays_folder']
 dolphin = CONFIG['dolphin']
 melee = CONFIG['melee']
 obs_path = CONFIG['obs_path']
-# obs = 'C:\\Program Files\\obs-studio\\bin\\64bit\\obs.bat'  # path to OBS
 obs_exe = 'obs64.exe'
-# obs = 'C:\\Users\\bazoo\\Desktop\\s2v\\py\\obs.lnk'  # path to OBS
 hotkey = CONFIG['hotkey'] # hotkey to stop recording OBS
 
 # Fetch replay data, load Slippi and records video
