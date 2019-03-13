@@ -7,8 +7,7 @@ Script to convert Project Slippi replays into video using OBS
 * [Project Slippi desktop app](https://github.com/project-slippi/slippi-desktop-app/releases). Comes with a custom version of Dolphin. Configure Dolphin as you like, but check the `Render to main window` option on `Graphics/General`. If the changes are not getting saved, check that the folder is not read only or that you have permissions.
 * Install python dependencies.
 ```
-pip install py-slippi
-pip install pyautogui
+pip install py-slippi pyautogui
 ```
 [py-slippi](https://github.com/hohav/py-slippi) is under development, so you might need the git version (this script was writen using this [commit](https://github.com/hohav/py-slippi/tree/967973d9650247de541a2e20cfd727eea3a8331a))
 ```pip install git+https://github.com/hohav/py-slippi --upgrade```
@@ -20,7 +19,7 @@ pip install pyautogui
 # OBS Script
 Instead of using s2v.py, it's possible to use OBS' built-in Python API (preferable atm). Set up take a little bit longer.
 
-* Open OBS and go to `Tools` > `Scripts` > `Python Settings` and there select the directory with your `python.exe`. *IMPORTANT NOTE:* Must match Python/OBS bits version (32 or 64 bits) and must be Python 3.6.something, as 3.7 doesn't work (OBS fault I think, as I just doesn't even execute the sample script that comes with the program) or maybe it's just me lol. As a result, if you opt for a 'portable' version of Python, you'll probably need to follow [this guide](https://michlstechblog.info/blog/python-install-python-with-pip-on-windows-by-the-embeddable-zip-file/) in order to be able to download the necessary packages py-slippi.
+* Open OBS and go to `Tools` > `Scripts` > `Python Settings` and there select the directory with your `python.exe`. ?__IMPORTANT NOTE:__ Must match Python/OBS bits version (32 or 64 bits) and must be Python 3.6.something, as 3.7 doesn't work (OBS fault I think, as I just doesn't even execute the sample script that comes with the program) or maybe it's just me lol. As a result, if you opt for a 'portable' version of Python, you'll probably need to follow [this guide](https://michlstechblog.info/blog/python-install-python-with-pip-on-windows-by-the-embeddable-zip-file/) in order to be able to download the necessary packages py-slippi.
 * Go to the `Scripts` tab, click the `+` button, and select `obs_s2v.py`.
 * Configure the options and click Start
 * Pray once again
