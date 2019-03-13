@@ -8,6 +8,7 @@ Script to convert Project Slippi replays into video using OBS
 * Install python dependencies.
 ```
 pip install py-slippi
+pip install pyautogui
 ```
 [py-slippi](https://github.com/hohav/py-slippi) is under development, so you might need the git version (this script was writen using this [commit](https://github.com/hohav/py-slippi/tree/967973d9650247de541a2e20cfd727eea3a8331a))
 ```pip install git+https://github.com/hohav/py-slippi --upgrade```
