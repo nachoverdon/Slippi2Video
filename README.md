@@ -19,6 +19,9 @@ pip install py-slippi
 Instead of using s2v.py, it's possible to use OBS' built-in Python API (preferable atm). Set up take a little bit longer.
 
 * Open OBS and go to `Tools` > `Scripts` > `Python Settings` and there select the directory with your `python.exe`. *IMPORTANT NOTE:* Must match Python/OBS bits version (32 or 64 bits) and must be Python 3.6.something, as 3.7 doesn't work (OBS fault I think, as I just doesn't even execute the sample script that comes with the program) or maybe it's just me lol. As a result, if you opt for a 'portable' version of Python, you'll probably need to follow [this guide](https://michlstechblog.info/blog/python-install-python-with-pip-on-windows-by-the-embeddable-zip-file/) in order to be able to download the necessary packages py-slippi.
+* Go to the `Scripts` tab, click the `+` button, and select `obs_s2v.py`.
+* Configure the options and click Start
+* Pray once again
 
 # Notes
 Things to investigate/improve:
