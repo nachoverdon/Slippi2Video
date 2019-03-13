@@ -26,6 +26,7 @@ def convert(replay):
         print('Replay ' + replay + ' is 30 seconds long or less.')
         return
     dolphin_process = launch_dolphin()
+    time.sleep(2)  # Time it takes to load game aprox.
     record_video(replay, seconds, dolphin_process)
 
 
@@ -39,7 +40,7 @@ def get_frames(replay):
 def record_video(replay, seconds, dolphin_process):
     # starts OBS recording
     obs_process = launch_obs()
-    print('Recording...')
+    print('Recording', os.path.basename(replay) + '...')
     watch_replay(replay)
 
     # waits for the duration of the replay
@@ -65,7 +66,6 @@ def launch_dolphin():
     watch_replay("")
     dolphin_process = subprocess.Popen(
         [dolphin, '-i', 'replay.txt', '-b', '-e', melee])
-    time.sleep(2)  # Time it takes to load game aprox.
 
     return dolphin_process
 
@@ -84,6 +84,7 @@ def launch_obs():
 
 # Get replays names
 replays = glob(replays_folder + '/*.slp')
+print('Replays found: ', len(replays))
 
 # for each replay, load slippi and record video
 for replay in replays:
