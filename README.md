@@ -4,7 +4,7 @@ Script to convert Project Slippi replays into video using OBS
 # Requires
 * Python 3.6+ (`s2v.py` might work with a lesser version, but `obs_s2v.py` won't)
 * Windows. Untested on other platforms. Might work perfectly though, who knows.
-* [Project Slippi desktop app](https://github.com/project-slippi/slippi-desktop-app/releases). Comes with a custom version of Dolphin. Configure Dolphin as you like, but check the `Render to main window` option on `Graphics/General`. If the changes are not getting saved, check that the folder is not read only or that you have permissions.
+* [Project Slippi desktop app](https://github.com/project-slippi/slippi-desktop-app/releases). Comes with a custom version of Dolphin, select this one when setting up your `config.py` or OBS script. Configure Dolphin as you like. If the changes are not getting saved, check that the folder is not read only or that you have permissions.
 * Install python dependencies.
 ```
 pip install py-slippi pyautogui
@@ -30,7 +30,7 @@ Things to investigate/improve:
 
 Better sync
 
-Trimming video
+Trimming video / cut black frames
 
 Dolphin 200% + audio dump, then ffmpeg slowdown
 
@@ -39,3 +39,5 @@ Dolphin codecs
 Renaming video with game info (player names, chars, stage...)
 
 Youtube auto upload
+
+Use queue system

@@ -1,3 +1,4 @@
+import os
 import json
 import math
 import time
@@ -64,8 +65,8 @@ def script_defaults(settings):
     obs.obs_data_clear(settings)
 
 def script_description():
-    return "Launch, sync and record Project Slippi replays. \n" \
-        "More info at: https://github.com/nachoverdon/Slippi2Video"
+    return 'Launch, sync and record Project Slippi replays.\n' \
+        'More info at: https://github.com/nachoverdon/Slippi2Video'
 
 def script_update(settings):
     global replays_dir
@@ -79,15 +80,16 @@ def script_update(settings):
 def script_properties():
     props = obs.obs_properties_create()
 
-    rep = ['replays', 'Replays folder', obs.OBS_PATH_DIRECTORY, "", None]
-    dol = ['dolphin', 'Dolphin.exe (Slippi)', obs.OBS_PATH_FILE, "*.exe", None]
-    ml = ['melee', 'Melee 1.02 .ISO', obs.OBS_PATH_FILE, "*.iso", None]
+    rep = ['replays', 'Replays folder', obs.OBS_PATH_DIRECTORY, '', None]
+    dol = ['dolphin', 'Dolphin.exe (Slippi)', obs.OBS_PATH_FILE, '*.exe',
+        os.getenv('APPDATA') + '\\Slippi Launcher\\dolphin\\Dolphin.exe']
+    ml = ['melee', 'Melee 1.02 .ISO', obs.OBS_PATH_FILE, '*.iso', None]
 
     obs.obs_properties_add_path(props, *rep)
     obs.obs_properties_add_path(props, *dol)
     obs.obs_properties_add_path(props, *ml)
 
-    obs.obs_properties_add_button(props, "start", "Start", start)
-    obs.obs_properties_add_button(props, "stop", "Stop", stop)
+    obs.obs_properties_add_button(props, 'start', 'Start', start)
+    obs.obs_properties_add_button(props, 'stop', 'Stop', stop)
 
     return props
