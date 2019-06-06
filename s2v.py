@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 import os
+import platform
 import time
 import math
 import json
@@ -15,8 +17,9 @@ replays_folder = CONFIG['replays_folder']
 dolphin = CONFIG['dolphin']
 melee = CONFIG['melee']
 obs_path = CONFIG['obs_path']
-obs_exe = 'obs64.exe'
-hotkey = CONFIG['hotkey'] # hotkey to stop recording OBS
+obs_exe = 'obs64.exe' if platform.system() == 'Windows' else './OBS'
+hotkey = CONFIG['hotkey']  # hotkey to stop recording OBS
+
 
 # Fetch replay data, load Slippi and records video
 def convert(replay):
