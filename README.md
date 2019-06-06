@@ -17,6 +17,8 @@ For Mac, `pyautogui` has a couple of extra requirements, which you can install w
 * Pray for it to work.
 
 # OBS Script
+Only tested for Windows. "Python scripting has never been officially supported on mac since we couldn't get it to work (also issues with the buildserver I believe). Doesn't appear that anybody has figured out why it didn't work or fixed it." (per [Rodney on OBS Forums](https://obsproject.com/forum/threads/python-scripting-dont-work-on-obs-22-0-3.99061/#post-386891))
+
 Instead of using s2v.py, it's possible to use OBS' built-in Python API (preferable atm). Set up take a little bit longer.
 
 * Open OBS and go to `Tools` > `Scripts` > `Python Settings` and there select the directory with your `python.exe`.
